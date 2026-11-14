@@ -1,117 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Built with AI Studio</title>
-    <meta
-      name="description"
-      content="Landing page for AI Studio featuring a modern app experience."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="brand-wrap">
-          <div class="brand-mark">A</div>
-          <span>AI Studio</span>
-        </div>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#solutions">Solutions</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#resources">Resources</a>
-        </nav>
-        <a class="nav-cta" href="#start">Start building</a>
-      </header>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathan FFH | पठान फैब्रिकेशन एंड फर्नीचर हाउस - प्रीमियम शिल्पकार</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#05070d',
+                        charcoal: '#0c111d',
+                        cardDark: '#111827',
+                        goldPrimary: '#d4af37',
+                        goldBright: '#fde047',
+                        goldDeep: '#996515',
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'float-delayed': 'float 5s ease-in-out 2s infinite',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'shimmer': 'shimmer 3s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.8', transform: 'scale(1.08)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% center' },
+                            '100%': { backgroundPosition: '200% center' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-      <main>
-        <section class="hero">
-          <div class="hero-copy">
-            <span class="eyebrow">Built with AI Studio</span>
-            <h1>The fastest path from prompt to production with Gemini.</h1>
-            <p>
-              Design, prototype, and ship AI-powered experiences faster with a
-              workspace built for builders, teams, and real-world deployment.
-            </p>
-            <div class="cta-row">
-              <a class="primary-btn" href="#start">Start building</a>
-              <a class="secondary-btn" href="#features">See how it works</a>
-            </div>
-            <ul class="hero-list" aria-label="Product highlights">
-              <li>Faster iteration</li>
-              <li>Prompt-to-app workflows</li>
-              <li>Production-ready outputs</li>
-            </ul>
-          </div>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #05070d;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
 
-          <div class="hero-visual" aria-label="AI Studio dashboard preview">
-            <div class="dashboard-window">
-              <div class="window-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
+        .royal-font {
+            font-family: 'Cinzel', serif;
+        }
 
-              <div class="window-body">
-                <aside class="sidebar">
-                  <div class="mini-logo">AI</div>
-                  <div class="side-pill active"></div>
-                  <div class="side-pill"></div>
-                  <div class="side-pill"></div>
-                </aside>
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
 
-                <div class="workspace-panel">
-                  <div class="workspace-top">
-                    <div class="title-block">
-                      <span class="small-label">App workspace</span>
-                      <h2>Gemini flow</h2>
-                    </div>
-                    <button class="chip-btn">Live</button>
-                  </div>
+        /* Shimmer Gold Text */
+        .gold-shimmer-text {
+            background: linear-gradient(90deg, #b48811 0%, #fbd38d 25%, #fffbeb 50%, #fbd38d 75%, #b48811 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
 
-                  <div class="canvas">
-                    <div class="prompt-card">
-                      <div class="prompt-header">
-                        <span>Prompt</span>
-                        <span class="status-dot"></span>
-                      </div>
-                      <p>
-                        Build a customer support assistant that shortens response time
-                        and improves clarity across channels.
-                      </p>
-                    </div>
+        /* 3D Glass & Metal Card */
+        .card-3d {
+            background: linear-gradient(145deg, rgba(20, 28, 46, 0.85), rgba(8, 12, 22, 0.95));
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 25px rgba(212, 175, 55, 0.08);
+            transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+        }
 
-                    <div class="result-stack">
-                      <div class="result-card primary-card">
-                        <span class="card-label">Generated app</span>
-                        <div class="mini-bars">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="result-card secondary-card">
-                        <span class="card-label">Deploy ready</span>
-                        <div class="metric-row">
-                          <strong>98.4%</strong>
-                          <small>Confidence</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.4), transparent 50%, rgba(212, 175, 55, 0.5));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
 
-        <section class="logos
+        .card-3d:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.9),
+                0 10px 40px rgba(212, 175, 55, 0.35);
+            border-color: rgba(253, 22
